@@ -4,6 +4,7 @@ import maxime.javabnb.logements.Logement;
 import maxime.javabnb.reservations.Sejour;
 import maxime.javabnb.utilisateurs.Personne;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
@@ -11,15 +12,12 @@ public class Main {
         Personne maxB = new Personne("Bjrd", "Max", 25);
         Personne benM = new Personne("Mtr", "Ben", 38);
         Personne samM = new Personne("Msq", "Sam", 23);
-//        maxB.afficher();
-//        benM.afficher();
-//        samM.afficher();
 
-        Logement logement = new Logement(maxB, 50, "8 rue des Alouettes, 37000 Tours", 180, 15);
-        logement.afficher();
+        Logement logement_1 = new Logement(maxB, 50, "8 rue des Alouettes, 37000 Tours", 180, 15);
 
-        Date dateArrivee;
+        Date date_1 = new Date(126, Calendar.JANUARY, 10);
 
-        Sejour sejour = new Sejour(05/07/2026, 2, logement, 3);
+        Sejour sejour_1 = new Sejour(date_1, 3, logement_1, 2);
+        sejour_1.afficher();
     }
 }

@@ -9,12 +9,12 @@ public class Logement {
     private int superficie;
     private int nbVoyageursMax;
 
-    public Logement(Personne hoteLogement, int tarifParNuitLogement, String adresseLogement, int superficieLogement, int nbVoyageursMaxLogement) {
-        hote = hoteLogement;
-        tarifParNuit = tarifParNuitLogement;
-        adresse = adresseLogement;
-        superficie = superficieLogement;
-        nbVoyageursMax = nbVoyageursMaxLogement;
+    public Logement(Personne hote, int tarifParNuit, String adresse, int superficie, int nbVoyageursMax) {
+        this.hote = hote;
+        this.tarifParNuit = tarifParNuit;
+        this.adresse = adresse;
+        this.superficie = superficie;
+        this.nbVoyageursMax = nbVoyageursMax;
     }
 
     public int getTarifParNuit() {
