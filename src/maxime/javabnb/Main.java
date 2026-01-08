@@ -1,6 +1,7 @@
 package maxime.javabnb;
 
 import maxime.javabnb.logements.Logement;
+import maxime.javabnb.outils.Utile;
 import maxime.javabnb.reservations.Sejour;
 import maxime.javabnb.utilisateurs.Personne;
 
@@ -15,9 +16,10 @@ public class Main {
 
         Logement logement_1 = new Logement(maxB, 50, "8 rue des Alouettes, 37000 Tours", 180, 15);
 
-        Date date_1 = new Date(126, Calendar.JANUARY, 10);
+//        Date date_1 = new Date(126, Calendar.JANUARY, 10);
+        Date date_2 = Utile.creerDate(12, 1, 2026);
 
-        Sejour sejour_1 = new Sejour(date_1, 3, logement_1, 2);
+        Sejour sejour_1 = new Sejour(date_2, 3, logement_1, 2);
         sejour_1.afficher();
     }
 }

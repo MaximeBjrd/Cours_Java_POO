@@ -1,6 +1,7 @@
 package maxime.javabnb.reservations;
 
 import maxime.javabnb.logements.Logement;
+import maxime.javabnb.outils.Utile;
 
 import java.util.Date;
 
@@ -19,7 +20,7 @@ public class Sejour {
 
     public void afficher() {
         logement.afficher();
-        System.out.println("La date d'arrivée est le " + dateArrivee.getDate() + "/" + (dateArrivee.getMonth()+1) + "/" + (dateArrivee.getYear()+1900) + " pour " + nbNuits + " nuits.");
+        System.out.println("La date d'arrivée est le " + Utile.formatDate(dateArrivee) + " pour " + nbNuits + " nuits.");
         System.out.println("Le prix de ce séjour est de " + (logement.getTarifParNuit() * nbNuits) + "€.");
     }
 }
