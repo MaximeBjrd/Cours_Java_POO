@@ -2,6 +2,7 @@ package maxime.javabnb.utilisateurs;
 
 
 public class Personne {
+
     private final String nom;
     private final String prenom;
     private final int age;
@@ -13,6 +14,7 @@ public class Personne {
     }
 
     public void afficher() {
-        System.out.println("Bonjour " + prenom + " " + nom + " (" + age + " ans)");
+        System.out.print(prenom + " " + nom + " (" + age + " ans)");
     }
+
 }
