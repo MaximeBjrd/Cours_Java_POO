@@ -15,14 +15,18 @@ public class Appartement extends Logement {
 
     @Override
     public void afficher() {
-        super.afficher();
+        getHote().afficher();
+
+        System.out.println("L'adresse de l'appartement est: " + getAdresse() + " et il est au "+ (numeroEtage==0 ? "Rez de chaussée" : (numeroEtage==1 ? "1er étage" : numeroEtage + "e étage")));
+        System.out.println("Superficie: " + getSuperficie() + "m²");
+        System.out.println("Nombre max de voyageurs: " + getNbVoyageursMax() + "p.");
+
         if(superficieBalcon == 0) {
             System.out.println("Balcon: Non");
         }
         else {
             System.out.println("Balcon: Oui (" + superficieBalcon + "m²)");
         }
-        System.out.println("Etage: " + (numeroEtage==0 ? "Rez de chaussée" : (numeroEtage==1 ? "1er étage" : numeroEtage + "e étage")));
     }
 
 }

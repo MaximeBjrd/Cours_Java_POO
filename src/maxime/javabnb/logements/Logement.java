@@ -2,7 +2,7 @@ package maxime.javabnb.logements;
 
 import maxime.javabnb.utilisateurs.Hote;
 
-public class Logement {
+public abstract class Logement {
 
     private Hote hote;
     private int tarifParNuit;
@@ -18,6 +18,10 @@ public class Logement {
         this.nbVoyageursMax = nbVoyageursMax;
     }
 
+    public Hote getHote() {
+        return hote;
+    }
+
     public int getTarifParNuit() {
         return tarifParNuit;
     }
@@ -26,11 +30,14 @@ public class Logement {
         return adresse;
     }
 
-    public void afficher() {
-        hote.afficher();
-        System.out.println("Le logement est situé au " + adresse + ".");
-        System.out.println("Superficie: " + superficie + "m²");
-        System.out.println("Nombre max de voyageurs: " + nbVoyageursMax + "p.");
+    public int getSuperficie() {
+        return superficie;
     }
+
+    public int getNbVoyageursMax() {
+        return nbVoyageursMax;
+    }
+
+    public abstract void afficher();
 
 }
